@@ -1,0 +1,22 @@
+version: '3.9'
+
+volumes:
+  mysql_volume:
+
+networks:
+  filme_network:
+    driver: bridge
+
+services:
+   
+  mysqldb:
+    image: mysql:8.0.30
+    ports:
+    - 3306:3306
+    volumes:
+      - mysql_volume:/var/lib/mysql
+    networks:
+      - filme_network
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: db_filme
