@@ -30,3 +30,13 @@
 /Users/heniojr/Dev/FilmesApi/FilmesApi/obj/Debug/net6.0/FilmesApi.pdb
 /Users/heniojr/Dev/FilmesApi/FilmesApi/obj/Debug/net6.0/FilmesApi.genruntimeconfig.cache
 /Users/heniojr/Dev/FilmesApi/FilmesApi/obj/Debug/net6.0/ref/FilmesApi.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Humanizer.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/MySqlConnector.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
