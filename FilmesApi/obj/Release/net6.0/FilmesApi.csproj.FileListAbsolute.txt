@@ -40,3 +40,5 @@
 /Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/MySqlConnector.dll
 /Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/System.Diagnostics.DiagnosticSource.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/AutoMapper.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

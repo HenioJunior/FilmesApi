@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "KVSKiRirA+KiIL0aexhIEbV34+9GlHXIKt3PKoodMyLIiA5Wlt2+LQlFDmXod0sV2hS8/kSFM4RD+c7oGpbFnQ==",
+  "dgSpecHash": "RoPsRG+6aXGGAaaIGbi+FwQga+cTwmZ9DpxpespsENj+2IuacmGDSb8N27FZGjtNjgnumIombF2WdY1qNwKP7g==",
   "success": true,
   "projectFilePath": "/Users/heniojr/Dev/FilmesApi/FilmesApi/FilmesApi.csproj",
   "expectedPackageFiles": [
+    "/Users/heniojr/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/heniojr/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/heniojr/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/heniojr/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/heniojr/.nuget/packages/microsoft.entityframeworkcore/6.0.21/microsoft.entityframeworkcore.6.0.21.nupkg.sha512",
     "/Users/heniojr/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.21/microsoft.entityframeworkcore.abstractions.6.0.21.nupkg.sha512",
     "/Users/heniojr/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.21/microsoft.entityframeworkcore.analyzers.6.0.21.nupkg.sha512",
