@@ -51,6 +51,44 @@ Mapeamento App x BD
         
         Update-Database
 
+5. Mapper(DTO);
+
+- Instalação AutoMapper e AutoMapper.Extensions
+
+- Add builder em Programs.cs;
+    `builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())`
+
+- Criação do Profiles(Profiles/FilmeProfile.cs)
+
+    Esta classe extende de `Profile`;
+
+    Criação do método CreateMap no construtor;
+        `CreateMap<CreateFilmeDto, Filme>();`
+
+- No Controller
+
+    Injetar a interface IMapper e adicionar no constructor;
+        `private IMapper _mapper;`
+
+    Ex de uso no método `CreateFilmeDto`
+        `var filme = _mapper.Map<Filme>(filmeDto);`
+
+6. Atualização parcial com (Patch)
+
+- Instalação da lib Microsoft.AspNetCore.Mvc.NewtonsoftJson
+
+- Em Program.cs na linha que contem `builder.Services.AddControllers()` adicionar o NewtonsoftJson: </br>
+`builder.Services.AddControllers().AddNewtonsoftJson()`
+
+    
+
+
+
+
+
+
+
+
 
 
 
