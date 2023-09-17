@@ -58,3 +58,5 @@
 /Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/Newtonsoft.Json.dll
 /Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/Newtonsoft.Json.Bson.dll
+/Users/heniojr/Dev/FilmesApi/FilmesApi/bin/Release/net6.0/FilmesApi.xml
+/Users/heniojr/Dev/FilmesApi/FilmesApi/obj/Release/net6.0/FilmesApi.xml
