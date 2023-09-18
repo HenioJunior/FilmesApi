@@ -43,6 +43,12 @@ Mapeamento App x BD
 
     `dotnet ef database update --project FilmesApi`
 
+    Após criação de novas classes, é necessário adicionar e atualizar a migration(Ex: Cinema);
+
+    `dotnet ef migrations add Cinema --project FilmesApi`
+    
+    `dotnet ef database update --project FilmesApi`
+
 - No Windows 
 
     Console de gerenciador de pacotes Nuget
