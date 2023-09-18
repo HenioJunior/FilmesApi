@@ -2,7 +2,6 @@
 using FilmesApi.Data;
 using FilmesApi.Data.Dtos;
 using FilmesApi.Models;
-using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 #pragma warning disable CS1591
@@ -10,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FilmesApi.Controllers;
 
 [ApiController]
-[Route("[Controller]")]
+[Route("[controller]")]
 public class CinemaController : ControllerBase
 {
 	private FilmeContext _context;
@@ -23,26 +22,19 @@ public class CinemaController : ControllerBase
 		_mapper = mapper;
 	}
 
-    /// <summary>
-    /// Adiciona um cinema ao banco de dados
-    /// </summary>
-    /// <param name="cinemaDto">Objeto com os campos necessários para criação de um cinema</param>
-    /// <returns>IActionResult</returns>
-    /// <response code="201">Caso inserção seja feita com sucesso</response>
-	[HttpPost]
-    [ProducesResponseType(StatusCodes.Status201Created)]
+  	[HttpPost]
     public IActionResult AdicionarCinema([FromBody] CreateCinemaDto cinemaDto)
 	{
-		var cinema = _mapper.Map<Cinema>(cinemaDto);
+		Cinema cinema = _mapper.Map<Cinema>(cinemaDto);
 		_context.Cinemas.Add(cinema);
 		_context.SaveChanges();
-		return CreatedAtAction(nameof(RecuperarCinemaPorId), new { id = cinema.Id }, cinema);
+		return CreatedAtAction(nameof(RecuperarCinemaPorId), new { Id = cinema.Id }, cinemaDto);
 	}
 
 	[HttpGet]
-	public IEnumerable<ReadCinemaDto> RecuperaCinemas([FromQuery] int skip=0, int take = 5)
+	public IEnumerable<ReadCinemaDto> RecuperaCinemas()
 	{
-		return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.Skip(skip).Take(take));
+		return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.ToList());
 	}
 
 	[HttpGet("{id}")]
@@ -63,30 +55,7 @@ public class CinemaController : ControllerBase
 		_context.SaveChanges();
 		return NoContent();
 	}
-
-    [HttpPatch("{id}")]
-    public IActionResult AtualizarCinemaParcial(int id,
-        JsonPatchDocument<UpdateCinemaDto> patch)
-    {
-        var cinema = _context.Cinemas.FirstOrDefault(
-            cinema => cinema.Id == id);
-        if (cinema == null) return NotFound();
-
-        var cinemaParaAtualizar = _mapper.Map<UpdateCinemaDto>(cinema);
-
-        patch.ApplyTo(cinemaParaAtualizar, ModelState);
-
-        if (!TryValidateModel(cinemaParaAtualizar))
-        {
-            return ValidationProblem(ModelState);
-        }
-
-        _mapper.Map(cinemaParaAtualizar, cinema);
-        _context.SaveChanges();
-
-        return NoContent();
-    }
-
+    
     [HttpDelete("{id}")]
     public IActionResult DeletaCinema(int id)
     {
@@ -97,7 +66,7 @@ public class CinemaController : ControllerBase
         _context.SaveChanges();
         return NoContent();
     }
-       
+      
 }
 
 

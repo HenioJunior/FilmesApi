@@ -1,7 +1,8 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using FilmesApi.Data.Dtos;
 using FilmesApi.Models;
+
+#pragma warning disable CS1591
 
 namespace FilmesApi.Profiles
 {

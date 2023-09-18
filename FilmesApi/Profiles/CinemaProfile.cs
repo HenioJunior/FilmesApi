@@ -1,7 +1,8 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using FilmesApi.Data.Dtos;
 using FilmesApi.Models;
+
+#pragma warning disable CS1591
 
 namespace FilmesApi.Profiles
 {
@@ -10,7 +11,9 @@ namespace FilmesApi.Profiles
 		public CinemaProfile()
 		{
 			CreateMap <CreateCinemaDto, Cinema>();
-            CreateMap<Cinema, ReadCinemaDto>();
+            CreateMap<Cinema, ReadCinemaDto>()
+			.ForMember(cinemaDto => cinemaDto.Endereco,
+			opt => opt.MapFrom(cinema => cinema.Endereco));
             CreateMap<UpdateCinemaDto, Cinema>();
         }
 	}
