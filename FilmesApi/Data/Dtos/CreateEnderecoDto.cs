@@ -1,7 +1,9 @@
-﻿using System;
-namespace FilmesApi.Data.Dtos;
+﻿#pragma warning disable CS1591
+#pragma warning disable CS8618
 
-	public class CreateEnderecoDto
+namespace FilmesApi.Data.Dtos;
+	
+    public class CreateEnderecoDto
 	{
     public string Logradouro { get; set; }
     public int Numero { get; set; }

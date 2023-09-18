@@ -1,5 +1,7 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+
+#pragma warning disable CS1591
+#pragma warning disable CS8618
 
 namespace FilmesApi.Models;
 

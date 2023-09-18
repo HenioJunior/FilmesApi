@@ -1,6 +1,9 @@
 ﻿using FilmesApi.Models;
 using Microsoft.EntityFrameworkCore;
 
+#pragma warning disable CS1591
+#pragma warning disable CS8618
+
 namespace FilmesApi.Data;
 
 	public class FilmeContext: DbContext

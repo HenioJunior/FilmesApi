@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿#pragma warning disable CS1591
 
 namespace FilmesApi.Data.Dtos;
 

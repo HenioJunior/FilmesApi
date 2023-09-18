@@ -34,4 +34,7 @@
     <Folder Include="Data\Dtos\" />
     <Folder Include="Profiles\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig" />
+  </ItemGroup>
 </Project>

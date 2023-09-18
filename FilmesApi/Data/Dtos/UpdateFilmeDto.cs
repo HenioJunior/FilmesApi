@@ -1,10 +1,10 @@
-﻿using System;
+﻿#pragma warning disable CS1591
 using System.ComponentModel.DataAnnotations;
 
 namespace FilmesApi.Data.Dtos
 {
-	public class UpdateFilmeDto
-	{
+    public class UpdateFilmeDto
+    {
         [Required(ErrorMessage = "O título do filme é obrigatório")]
         public string? Titulo { get; set; }
         [Required(ErrorMessage = "O gênero do filme é obrigatório")]
