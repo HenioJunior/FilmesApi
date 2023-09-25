@@ -1920,11 +1920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/heniojr/Dev/FilmesApi/FilmesApi/FilmesApi.csproj",
+      "projectUniqueName": "/Users/heniojr/Dev/dotnet/FilmesApi/FilmesApi/FilmesApi.csproj",
       "projectName": "FilmesApi",
-      "projectPath": "/Users/heniojr/Dev/FilmesApi/FilmesApi/FilmesApi.csproj",
+      "projectPath": "/Users/heniojr/Dev/dotnet/FilmesApi/FilmesApi/FilmesApi.csproj",
       "packagesPath": "/Users/heniojr/.nuget/packages/",
-      "outputPath": "/Users/heniojr/Dev/FilmesApi/FilmesApi/obj/",
+      "outputPath": "/Users/heniojr/Dev/dotnet/FilmesApi/FilmesApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/heniojr/.nuget/NuGet/NuGet.Config"

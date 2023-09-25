@@ -49,6 +49,11 @@ Mapeamento App x BD
     
     `dotnet ef database update --project FilmesApi`
 
+    Rollback
+    `dotnet ef database update 20230910111952_CriantoTabelaDeFilme --project FilmesApi`
+    
+
+
 - No Windows 
 
     Console de gerenciador de pacotes Nuget
@@ -85,6 +90,10 @@ Mapeamento App x BD
 
 - Em Program.cs na linha que contem `builder.Services.AddControllers()` adicionar o NewtonsoftJson: </br>
 `builder.Services.AddControllers().AddNewtonsoftJson()`
+
+7.  Instalação do Proxies
+
+`dotnet add package Microsoft.EntityFrameworkCore.Proxies --version 6.0.10`
 
     
 
