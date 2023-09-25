@@ -4,17 +4,17 @@ using FilmesApi.Models;
 
 #pragma warning disable CS1591
 
-namespace FilmesApi.Profiles
+namespace FilmesApi.Profiles;
+public class FilmeProfile : Profile
 {
-	public class FilmeProfile : Profile
-	{
-		public FilmeProfile()
-		{
-			CreateMap<CreateFilmeDto, Filme>();
-			CreateMap<UpdateFilmeDto, Filme>();
-            CreateMap<Filme, UpdateFilmeDto>();
-			CreateMap<Filme, ReadFilmeDto>();
-        }
-	}
+    public FilmeProfile()
+    {
+        CreateMap<CreateFilmeDto, Filme>();
+        CreateMap<UpdateFilmeDto, Filme>();
+        CreateMap<Filme, UpdateFilmeDto>();
+        CreateMap<Filme, ReadFilmeDto>()
+        .ForMember(filmeDto => filmeDto.Sessoes,
+            opt => opt.MapFrom(filme =>
+            filme.Sessoes));
+    }
 }
-
