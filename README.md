@@ -95,6 +95,24 @@ Mapeamento App x BD
 
 `dotnet add package Microsoft.EntityFrameworkCore.Proxies --version 6.0.10`
 
+8. Evitando a deleção em cascata
+
+```c#
+  builder.Entity<Endereco>()
+        .HasOne(endereco => endereco.Cinema)
+        .WithOne(cinema => cinema.Endereco)
+        .OnDelete(DeleteBehavior.Restrict);
+```
+
+- Criar uma nova migration para atualizar a nova config.
+
+`dotnet ef migrations add "Delete restrict" --project FilmesApi`
+`dotnet ef database update --project FilmesApi;`
+
+
+
+
+
     
 
 
