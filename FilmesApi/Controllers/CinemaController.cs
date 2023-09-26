@@ -3,6 +3,7 @@ using FilmesApi.Data;
 using FilmesApi.Data.Dtos;
 using FilmesApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 #pragma warning disable CS1591
 
@@ -32,9 +33,14 @@ public class CinemaController : ControllerBase
 	}
 
 	[HttpGet]
-	public IEnumerable<ReadCinemaDto> RecuperaCinemas()
+	public IEnumerable<ReadCinemaDto> RecuperaCinemas([FromQuery] int? enderecoId)
 	{
-		return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.ToList());
+		if (enderecoId == null)
+		{
+			return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas.ToList());
+		}
+		return _mapper.Map<List<ReadCinemaDto>>(_context.Cinemas
+		.FromSql($"SELECT Id, Nome, EnderecoId from Cinemas WHERE Cinemas.EnderecoId = {enderecoId} ").ToList());
 	}
 
 	[HttpGet("{id}")]
